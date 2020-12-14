@@ -1,0 +1,117 @@
+.advantage {
+  padding: 56px 0px 40px 0px;
+  background: #f8f8f8;
+  min-height: 937px;
+  &__title {
+    width: 1350px;
+    margin-bottom: 0px;
+  }
+  &__photo {
+    margin: 163px 0px 0px 100px;
+  }
+  &__items {
+    position: relative;
+  }
+  &__item {
+    position: relative;
+    width: 332px;
+    &::before {
+      content: url('../img/icons/plus.svg');
+      position: absolute;
+      top: -10px;
+      left: -50px;
+    }
+    &-header {
+      width: 250px;
+      font-family: Montserrat;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 150%;
+      color: $grey;
+    }
+    &-subheader {
+      font-family: Roboto;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      color: #4f4f4f;
+    }
+    &-1 {
+      position: absolute;
+      left: 120px;
+      top: -490px;
+      &::after {
+        content: url('../img/advantages/arrow_1.svg');
+        position: absolute;
+        right: -70px;
+        top: -30px;
+      }
+    }
+    &-2 {
+      position: absolute;
+      right: 330px;
+      top: -530px;
+      &::after {
+        content: url('../img/advantages/arrow_2.svg');
+        position: absolute;
+        left: -100px;
+        top: 10px;
+      }
+    }
+    &-3 {
+      position: absolute;
+      right: -40px;
+      top: -400px;
+      &::after {
+        content: url('../img/advantages/arrow_3.svg');
+        position: absolute;
+        right: 360px;
+        top: 30px;
+      }
+    }
+    &-4 {
+      position: absolute;
+      right: 0px;
+      top: -170px;
+      &::after {
+        content: url('../img/advantages/arrow_4.svg');
+        position: absolute;
+        right: 374px;
+        top: 20px;
+      }
+    }
+    &-5 {
+      position: absolute;
+      right: 510px;
+      bottom: -95px;
+      &::after {
+        content: url('../img/advantages/arrow_5.svg');
+        position: absolute;
+        left: -70px;
+        top: -60px;
+      }
+    }
+    &-6 {
+      position: absolute;
+      left: 80px;
+      top: -60px;
+      &::after {
+        content: url('../img/advantages/arrow_6.svg');
+        position: absolute;
+        right: -100px;
+        top: 0px;
+      }
+    }
+    &-7 {
+      position: absolute;
+      left: 70px;
+      top: -287px;
+      &::after {
+        content: url('../img/advantages/arrow_7.svg');
+        position: absolute;
+        right: 2px;
+        top: 20px;
+      }
+    }
+  }
+}
