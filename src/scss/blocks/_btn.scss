@@ -1,0 +1,16 @@
+.btn {
+  width: 334px;
+  height: 60px;
+  background: linear-gradient(90deg, #e30613 0%, #f39200 100%);
+  border-radius: 5px;
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}

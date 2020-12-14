@@ -17,4 +17,11 @@
   margin: 0 auto;
 }
 
+.hide {
+  display: none;
+}
+
+@import './blocks/header';
+@import './blocks/btn';
+
 @import './blocks/media';
