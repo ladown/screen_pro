@@ -13,4 +13,7 @@
   &:focus {
     outline: none;
   }
+  &-green {
+    background: linear-gradient(90deg, #36a9e1 0%, #2fac66 100%);
+  }
 }

@@ -1,0 +1,51 @@
+.clients {
+  padding: 76px 0px 94px 0px;
+  &__slide {
+    margin-right: 40px;
+  }
+  &__slider {
+    &-wrapper {
+      margin-top: 77px;
+    }
+    &-container {
+      overflow: hidden;
+    }
+    &-track {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      position: relative;
+    }
+    &-btn {
+      position: relative;
+      &-prev {
+        position: absolute;
+        left: -60px;
+        top: -70px;
+        width: 50px;
+        height: 50px;
+        background: #fff;
+        background-image: url('../img/icons/left_btn.svg');
+        background-size: contain;
+        border: none;
+        &:focus {
+          outline: none;
+        }
+      }
+      &-next {
+        position: absolute;
+        right: -60px;
+        top: -70px;
+        width: 50px;
+        height: 50px;
+        background: #fff;
+        background-image: url('../img/icons/right_btn.svg');
+        background-size: contain;
+        border: none;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}

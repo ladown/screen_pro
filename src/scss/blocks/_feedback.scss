@@ -1,0 +1,40 @@
+.feedback {
+  padding: 86px 0px 220px 0px;
+  background: #f8f8f8;
+  &__subtitle {
+    display: block;
+    margin: 0px auto;
+    width: 810px;
+    margin-top: 18px;
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #4f4f4f;
+  }
+  &__wrapper {
+    margin-top: 55px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  &__list {
+    margin-bottom: 0;
+  }
+  &__item {
+    list-style-type: none;
+    margin-bottom: 30px;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    &:nth-child(7) {
+      margin-bottom: 0;
+    }
+    &:hover {
+      border-bottom: 2px dashed black;
+    }
+  }
+}
