@@ -21,9 +21,16 @@
   display: none;
 }
 
+.error {
+  border: 2px solid red !important;
+}
+
 @import './blocks/header';
 @import './blocks/btn';
 @import './blocks/advantages';
 @import './blocks/title';
+@import './blocks/usage';
+@import './blocks/calculation';
+@import './blocks/certification';
 
 @import './blocks/media';

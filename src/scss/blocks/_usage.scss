@@ -1,0 +1,52 @@
+.usage {
+  padding: 86px 0px;
+  &__wrapper {
+    margin-top: 31px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(338px, auto));
+    grid-template-rows: repeat(auto-fill, minmax(470px, auto));
+    grid-auto-rows: 470px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__card {
+    width: 338px;
+    min-height: 470px;
+    background: #ffffff;
+    border-radius: 5px;
+    &:hover {
+      filter: drop-shadow(5px 5px 20px rgba(37, 56, 84, 0.2));
+      transition: all 0.5s;
+      .usage__card-gradient {
+        background: linear-gradient(90deg, #36a9e1 0%, #2fac66 100%);
+        .usage__card-title {
+          mix-blend-mode: screen;
+          background: #ffffff;
+        }
+      }
+    }
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &-descr {
+      padding: 17px 17px 43px 20px;
+    }
+    &-title {
+      font-family: Montserrat;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 120%;
+      color: $grey;
+    }
+    &-text {
+      margin-top: 8px;
+      font-family: Roboto;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #4f4f4f;
+    }
+  }
+}

@@ -1630,6 +1630,62 @@ window.addEventListener('DOMContentLoaded', function () {
     arrowBtn.classList.toggle("header__contacts-arrowdown-active");
     text.classList.toggle('header__contacts-text-active');
     social.classList.toggle("header__contacts-mess-active");
+  }); // VALIDATION FIRST FORM
+
+  var firstForm = document.querySelector(".header__consultation-form");
+  var firstFormFields = document.querySelectorAll(".firstFormField");
+  var firstFormName = document.querySelector("#name");
+  var firstFormPhone = document.querySelector("#tel");
+  firstForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    for (var i = 0; i < firstFormFields.length; i++) {
+      if (!firstFormFields.value) {
+        firstFormFields[i].classList.add("error");
+      } else {
+        firstFormFields[i].classList.remove("error");
+      }
+    }
+
+    if (/^['A-Za-z\u017F\u0410-\u044F\u1C80-\u1C83\u1C85\u1C86\u212A][ '\x2DA-Za-z\u017F\u0410-\u044F\u1C80-\u1C83\u1C85\u1C86\u212A]+['A-Za-z\u017F\u0410-\u044F\u1C80-\u1C83\u1C85\u1C86\u212A]?$/gi.test(firstFormName.value)) {
+      firstFormName.classList.remove("error");
+    } else {
+      firstFormName.classList.add("error");
+    }
+
+    if (/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(firstFormPhone.value)) {
+      firstFormPhone.classList.remove("error");
+    } else {
+      firstFormPhone.classList.add("error");
+    }
+  }); // VALIDATION SECOND FORM
+
+  var secondForm = document.querySelector(".calculation__form");
+  var secondFormFields = document.querySelectorAll(".secondFormField");
+  var secondFormName = document.querySelector("#secondFormName");
+  var secondFormEmail = document.querySelector("#secondFormEmail");
+  secondForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    for (var i = 0; i < secondFormFields.length; i++) {
+      if (!secondFormFields[i].value) {
+        secondFormFields[i].classList.add("error");
+      } else {
+        secondFormFields[i].classList.remove("error");
+      }
+    }
+
+    if (/^['A-Za-z\u017F\u0410-\u044F\u1C80-\u1C83\u1C85\u1C86\u212A][ '\x2DA-Za-z\u017F\u0410-\u044F\u1C80-\u1C83\u1C85\u1C86\u212A]+['A-Za-z\u017F\u0410-\u044F\u1C80-\u1C83\u1C85\u1C86\u212A]?$/gi.test(secondFormName.value)) {
+      secondFormName.classList.remove("error");
+    } else {
+      secondFormName.classList.add("error");
+    }
+
+    if (/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/gi.test(secondFormEmail.value)) {
+      secondFormEmail.classList.remove("error");
+    } else {
+      secondFormEmail.classList.add("error");
+    }
   });
 });
 

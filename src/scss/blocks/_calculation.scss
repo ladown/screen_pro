@@ -1,0 +1,51 @@
+.calculation {
+  background: #f8f8f8;
+  min-height: 350px;
+  padding: 61px 0px;
+  &__descr {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: #4f4f4f;
+  }
+  &__title {
+    margin-top: 10px;
+  }
+  &__form {
+    margin-top: 52px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(252px, 400px));
+    grid-template-rows: repeat(auto-fill, minmax(60px, auto));
+    grid-auto-rows: 60px;
+    column-gap: 45px;
+    &-input {
+      input {
+        border: 1px solid #bdbdbd;
+        box-sizing: border-box;
+        border-radius: 5px;
+        width: 400px;
+        height: 60px;
+        padding: 0px 40px 0px 40px;
+        font-family: Montserrat;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000;
+      }
+      input[id='secondFormName'] {
+        background-image: url('../img/icons/person.svg');
+        background-position: left;
+        background-repeat: no-repeat;
+      }
+      input[id='secondFormEmail'] {
+        background-image: url('../img/icons/mail.svg');
+        background-position: left;
+        background-repeat: no-repeat;
+      }
+    }
+    &-btn {
+      width: 252px;
+    }
+  }
+}
