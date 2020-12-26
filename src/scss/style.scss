@@ -17,12 +17,34 @@
   margin: 0 auto;
 }
 
+.rel {
+  position: relative;
+}
+
 .hide {
   display: none;
 }
 
 .error {
   border: 2px solid red !important;
+}
+
+.up {
+  cursor: pointer;
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+  img {
+    position: fixed;
+    right: 90px;
+    bottom: 90px;
+  }
+  &-active {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s;
+  }
 }
 
 @import './blocks/header';
@@ -36,5 +58,9 @@
 @import './blocks/clients';
 @import './blocks/feedback';
 @import './blocks/team';
+@import './blocks/consultation';
+@import './blocks/faq';
+@import './blocks/contacts';
+@import './blocks/footer';
 
 @import './blocks/media';

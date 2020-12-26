@@ -1,0 +1,50 @@
+.consultation {
+  &__wrapper {
+    position: absolute;
+    width: 1440px;
+    background: #ffffff;
+    box-shadow: 10px 10px 50px rgba(37, 56, 84, 0.2);
+    border-radius: 5px;
+    padding: 54px 0px 50px 110px;
+    top: -120px;
+  }
+  &__title {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 120%;
+    color: $grey;
+  }
+  &__form {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(344px, 400px));
+    align-items: center;
+    column-gap: 30px;
+    &-input {
+      input {
+        padding: 0px 40px 0px 55px;
+        width: 400px;
+        height: 60px;
+        border: 1px solid #bdbdbd;
+        box-sizing: border-box;
+        border-radius: 5px;
+        font-family: Montserrat;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000;
+      }
+      input[type='text'] {
+        background-image: url('../img/icons/person.svg');
+        background-position: 15px 50%;
+        background-repeat: no-repeat;
+      }
+      input[type='tel'] {
+        background-image: url('../img/icons/phone.svg');
+        background-position: 15px 50%;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}

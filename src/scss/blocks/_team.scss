@@ -1,5 +1,5 @@
 .team {
-  padding: 86px 0px 40px 0px;
+  padding: 80px 0px 231px 0px;
   &__subtitle {
     display: block;
     margin: 0 auto;
@@ -23,6 +23,7 @@
     position: relative;
     background: #f8f8f8;
     &:hover {
+      filter: drop-shadow(5px 5px 20px rgba(37, 56, 84, 0.2));
       .team__item-img-gradient {
         background: linear-gradient(
           359.71deg,

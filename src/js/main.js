@@ -95,4 +95,115 @@ window.addEventListener('DOMContentLoaded', () => {
       secondFormEmail.classList.add(`error`);
     }
   });
+
+  // VALIDATION THIRD FORM
+
+  const thirdForm = document.querySelector(`.consultation__form`);
+  const thirdFormFields = document.querySelectorAll(`.thirdFormField`);
+  const thirdFormName = document.querySelector(`#thirdFormName`);
+  const thirdFormTel = document.querySelector(`#thirdFormTel`);
+
+  thirdForm.addEventListener(`submit`, (e) => {
+    e.preventDefault();
+
+    for (let i = 0; i < thirdFormFields.length; i++) {
+      if (!thirdFormFields[i].value) {
+        thirdFormFields[i].classList.add(`error`);
+      } else {
+        thirdFormFields[i].classList.remove(`error`);
+      }
+    }
+
+    if (/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(thirdFormTel.value)) {
+      thirdFormTel.classList.remove(`error`);
+    } else {
+      thirdFormTel.classList.add(`error`);
+    }
+
+    if (/^[a-zA-Zа-яА-Я'][a-zA-Zа-яА-Я-' ]+[a-zA-Zа-яА-Я']?$/giu.test(thirdFormName.value)) {
+      thirdFormName.classList.remove(`error`);
+    } else {
+      thirdFormName.classList.add(`error`);
+    }
+  });
+
+  // VALIDATION fouth FORM
+  const fouthForm = document.querySelector(`.contacts__form`);
+  const fouthFormFields = document.querySelectorAll(`.fouthFormField`);
+  const fouthFormName = document.querySelector(`#fouthFormName`);
+  const fouthFormEmail = document.querySelector(`#fouthFormEmail`);
+  const fouthFormTel = document.querySelector(`#fouthFormTel`);
+
+  fouthForm.addEventListener(`submit`, (e) => {
+    e.preventDefault();
+
+    for (let i = 0; i < fouthFormFields.length; i++) {
+      if (!fouthFormFields[i].value) {
+        fouthFormFields[i].classList.add(`error`);
+      } else {
+        fouthFormFields[i].classList.remove(`error`);
+      }
+    }
+
+    if (/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(fouthFormTel.value)) {
+      fouthFormTel.classList.remove(`error`);
+    } else {
+      fouthFormTel.classList.add(`error`);
+    }
+
+    if (/^[a-zA-Zа-яА-Я'][a-zA-Zа-яА-Я-' ]+[a-zA-Zа-яА-Я']?$/giu.test(fouthFormName.value)) {
+      fouthFormName.classList.remove(`error`);
+    } else {
+      fouthFormName.classList.add(`error`);
+    }
+
+    if (
+      /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/gi.test(
+        fouthFormEmail.value,
+      )
+    ) {
+      fouthFormEmail.classList.remove(`error`);
+    } else {
+      fouthFormEmail.classList.add(`error`);
+    }
+  });
+
+  // FAQ POPUP
+
+  const faqBtn = document.querySelectorAll(`.faq__item-btn`);
+  const faqPopup = document.querySelectorAll(`.faq__item-subheader`);
+  const faqDivider = document.querySelectorAll(`.faq__item-divider`);
+  const faqImg = document.querySelectorAll(`.faq__item-btn`);
+
+  faqBtn.forEach((btn, index) => {
+    btn.addEventListener(`click`, () => {
+      faqPopup[index].classList.toggle(`faq__item-subheader-active`);
+      faqDivider[index].classList.toggle(`faq__item-divider-active`);
+      faqImg[index].classList.toggle(`faq__item-btn-active`);
+    });
+  });
+
+  // FOOTER CALL
+  const footerBtn = document.querySelector(`.footer__phone-arrowdown`);
+  const footerCall = document.querySelector(`.footer__phone-text`);
+
+  footerBtn.addEventListener(`click`, () => {
+    footerBtn.classList.toggle(`footer__phone-arrowdown-active`);
+    footerCall.classList.toggle(`footer__phone-text-active`);
+  });
+
+  // SCROLL UP
+
+  const scrollIcon = document.querySelector(`.up`);
+
+  window.addEventListener(`scroll`, () => {
+    scrollIcon.addEventListener(`click`, () => {
+      scrollTo(0, 0);
+    });
+    if (window.pageYOffset >= 1000) {
+      scrollIcon.classList.add(`up-active`);
+    } else {
+      scrollIcon.classList.remove(`up-active`);
+    }
+  });
 });

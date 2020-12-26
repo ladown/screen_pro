@@ -1,0 +1,86 @@
+.faq {
+  padding: 166px 0px 100px 0px;
+  background: #f8f8f8;
+  &__subtitle {
+    display: block;
+    margin: 0 auto;
+    width: 810px;
+    margin-top: 18px;
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: #4f4f4f;
+    text-align: center;
+  }
+  &__wrapper {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(725px, 725px));
+    justify-content: center;
+    align-items: center;
+  }
+  &__item {
+    margin-bottom: 30px;
+    &:nth-child(8) {
+      margin-bottom: 0;
+    }
+    &-header {
+      padding: 20px 20px 20px 15px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-title {
+      font-family: Montserrat;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 40px;
+      color: $grey;
+    }
+
+    &-btn {
+      background-color: #f8f8f8;
+      border: none;
+      &:focus {
+        outline: none;
+      }
+      &-active {
+        background: linear-gradient(90deg, #e30613 0%, #f39200 100%);
+        img {
+          transform: rotate(90deg);
+          background-color: #f8f8f8;
+          mix-blend-mode: screen;
+        }
+      }
+    }
+    &-divider {
+      background: #333333;
+      width: 100%;
+      height: 2px;
+      &-active {
+        background: #7f661e;
+      }
+    }
+    &-subheader {
+      min-height: 190px;
+      display: none;
+      padding: 10px 53px 29px 20px;
+      font-family: Roboto;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #4f4f4f;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.5s;
+      &-active {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.5s;
+      }
+    }
+  }
+}

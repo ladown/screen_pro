@@ -1,0 +1,242 @@
+.contacts {
+  padding: 86px 0px 70px 0px;
+  &__subtitle {
+    display: block;
+    margin: 0 auto;
+    width: 800px;
+    margin-top: 18px;
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: #4f4f4f;
+    text-align: center;
+  }
+  &__wrapper {
+    margin-top: 55px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(661px, auto));
+  }
+  &__common {
+    display: flex;
+    flex-direction: column;
+    &-title {
+      font-family: Montserrat;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 150%;
+      color: $grey;
+    }
+  }
+  &__con {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(201px, auto));
+    gap: 30px 120px;
+  }
+  &__phone {
+    position: relative;
+    &-title {
+      font-family: Montserrat;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      color: #828282;
+    }
+    &-subtitle {
+      display: block;
+      margin-top: -5px;
+      font-family: Montserrat;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      color: #4f4f4f;
+      &:hover {
+        color: #4f4f4f;
+      }
+    }
+    &::before {
+      content: url('../img/icons/phone.svg');
+      position: absolute;
+      left: -30px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__mail {
+    position: relative;
+    &-title {
+      font-family: Montserrat;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      color: #828282;
+    }
+    &-subtitle {
+      display: block;
+      margin-top: -7px;
+      font-family: Montserrat;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      color: #4f4f4f;
+      &:hover {
+        color: #4f4f4f;
+      }
+    }
+    &::before {
+      content: url('../img/icons/mail.svg');
+      position: absolute;
+      left: -35px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__adress {
+    grid-column: span 2;
+    position: relative;
+    &-title {
+      font-family: Montserrat;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      color: #828282;
+    }
+    &-subtitle {
+      display: block;
+      margin-top: -7px;
+      font-family: Montserrat;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      color: #4f4f4f;
+      &:hover {
+        color: #4f4f4f;
+      }
+    }
+    &::before {
+      content: url('../img/icons/geo.svg');
+      position: absolute;
+      left: -40px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__media {
+    margin-top: 68px;
+    display: flex;
+    flex-direction: row;
+  }
+  &__social {
+    margin-right: 100px;
+    &-title {
+      font-family: Montserrat;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 150%;
+      color: $grey;
+    }
+    &-icons {
+      margin-top: 11px;
+    }
+    &-img {
+      width: 40px;
+    }
+    &-link {
+      margin-right: 20px;
+      &:nth-child(4) {
+        margin-right: 0;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  &__mess {
+    &-title {
+      font-family: Montserrat;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 150%;
+      color: $grey;
+    }
+    &-icons {
+      margin-top: 11px;
+    }
+    &-img {
+      width: 40px;
+    }
+    &-link {
+      margin-right: 20px;
+      &:nth-child(4) {
+        margin-right: 0;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(338px, 340px));
+    grid-template-rows: repeat(auto-fill, minmax(60px, 60px));
+    grid-auto-rows: 60px;
+    gap: 30px;
+    &-input {
+      input {
+        width: 338px;
+        height: 60px;
+        border: 1px solid #bdbdbd;
+        box-sizing: border-box;
+        border-radius: 5px;
+        padding: 0px 40px 0px 55px;
+      }
+      input[id='fouthFormName'] {
+        background-image: url('../img/icons/person.svg');
+        background-position: 15px 50%;
+        background-repeat: no-repeat;
+      }
+      input[id='fouthFormEmail'] {
+        background-image: url('../img/icons/mail.svg');
+        background-position: 15px 50%;
+        background-repeat: no-repeat;
+      }
+      input[id='fouthFormTel'] {
+        background-image: url('../img/icons/phone.svg');
+        background-position: 15px 50%;
+        background-repeat: no-repeat;
+      }
+    }
+    &-textarea {
+      grid-column: 2 / 3;
+      grid-row: 1 / 4;
+      textarea {
+        width: 340px;
+        height: 240px;
+        border: 1px solid #828282;
+        box-sizing: border-box;
+        border-radius: 5px;
+        padding: 16px 40px 16px 55px;
+        background-image: url('../img/icons/text.svg');
+        background-position: 15px 15px;
+        background-repeat: no-repeat;
+      }
+    }
+    &-policy {
+      font-family: Roboto;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      color: #828282;
+    }
+    &-submit {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+    &-btn {
+      width: 230px;
+      height: 60px;
+    }
+  }
+}

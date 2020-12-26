@@ -1686,6 +1686,101 @@ window.addEventListener('DOMContentLoaded', function () {
     } else {
       secondFormEmail.classList.add("error");
     }
+  }); // VALIDATION THIRD FORM
+
+  var thirdForm = document.querySelector(".consultation__form");
+  var thirdFormFields = document.querySelectorAll(".thirdFormField");
+  var thirdFormName = document.querySelector("#thirdFormName");
+  var thirdFormTel = document.querySelector("#thirdFormTel");
+  thirdForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    for (var i = 0; i < thirdFormFields.length; i++) {
+      if (!thirdFormFields[i].value) {
+        thirdFormFields[i].classList.add("error");
+      } else {
+        thirdFormFields[i].classList.remove("error");
+      }
+    }
+
+    if (/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(thirdFormTel.value)) {
+      thirdFormTel.classList.remove("error");
+    } else {
+      thirdFormTel.classList.add("error");
+    }
+
+    if (/^['A-Za-z\u017F\u0410-\u044F\u1C80-\u1C83\u1C85\u1C86\u212A][ '\x2DA-Za-z\u017F\u0410-\u044F\u1C80-\u1C83\u1C85\u1C86\u212A]+['A-Za-z\u017F\u0410-\u044F\u1C80-\u1C83\u1C85\u1C86\u212A]?$/gi.test(thirdFormName.value)) {
+      thirdFormName.classList.remove("error");
+    } else {
+      thirdFormName.classList.add("error");
+    }
+  }); // VALIDATION fouth FORM
+
+  var fouthForm = document.querySelector(".contacts__form");
+  var fouthFormFields = document.querySelectorAll(".fouthFormField");
+  var fouthFormName = document.querySelector("#fouthFormName");
+  var fouthFormEmail = document.querySelector("#fouthFormEmail");
+  var fouthFormTel = document.querySelector("#fouthFormTel");
+  fouthForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    for (var i = 0; i < fouthFormFields.length; i++) {
+      if (!fouthFormFields[i].value) {
+        fouthFormFields[i].classList.add("error");
+      } else {
+        fouthFormFields[i].classList.remove("error");
+      }
+    }
+
+    if (/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(fouthFormTel.value)) {
+      fouthFormTel.classList.remove("error");
+    } else {
+      fouthFormTel.classList.add("error");
+    }
+
+    if (/^['A-Za-z\u017F\u0410-\u044F\u1C80-\u1C83\u1C85\u1C86\u212A][ '\x2DA-Za-z\u017F\u0410-\u044F\u1C80-\u1C83\u1C85\u1C86\u212A]+['A-Za-z\u017F\u0410-\u044F\u1C80-\u1C83\u1C85\u1C86\u212A]?$/gi.test(fouthFormName.value)) {
+      fouthFormName.classList.remove("error");
+    } else {
+      fouthFormName.classList.add("error");
+    }
+
+    if (/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/gi.test(fouthFormEmail.value)) {
+      fouthFormEmail.classList.remove("error");
+    } else {
+      fouthFormEmail.classList.add("error");
+    }
+  }); // FAQ POPUP
+
+  var faqBtn = document.querySelectorAll(".faq__item-btn");
+  var faqPopup = document.querySelectorAll(".faq__item-subheader");
+  var faqDivider = document.querySelectorAll(".faq__item-divider");
+  var faqImg = document.querySelectorAll(".faq__item-btn");
+  faqBtn.forEach(function (btn, index) {
+    btn.addEventListener("click", function () {
+      faqPopup[index].classList.toggle("faq__item-subheader-active");
+      faqDivider[index].classList.toggle("faq__item-divider-active");
+      faqImg[index].classList.toggle("faq__item-btn-active");
+    });
+  }); // FOOTER CALL
+
+  var footerBtn = document.querySelector(".footer__phone-arrowdown");
+  var footerCall = document.querySelector(".footer__phone-text");
+  footerBtn.addEventListener("click", function () {
+    footerBtn.classList.toggle("footer__phone-arrowdown-active");
+    footerCall.classList.toggle("footer__phone-text-active");
+  }); // SCROLL UP
+
+  var scrollIcon = document.querySelector(".up");
+  window.addEventListener("scroll", function () {
+    scrollIcon.addEventListener("click", function () {
+      scrollTo(0, 0);
+    });
+
+    if (window.pageYOffset >= 1000) {
+      scrollIcon.classList.add("up-active");
+    } else {
+      scrollIcon.classList.remove("up-active");
+    }
   });
 });
 

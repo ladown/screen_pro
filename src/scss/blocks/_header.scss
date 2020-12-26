@@ -185,6 +185,7 @@
         border-radius: 5px;
         width: 338px;
         height: 60px;
+        padding: 0px 40px 0px 55px;
         &:focus {
           outline: none;
         }
@@ -198,15 +199,13 @@
       }
       input[type='text'] {
         background-image: url('../img/icons/person.svg');
-        background-position: left;
+        background-position: 15px 50%;
         background-repeat: no-repeat;
-        padding: 0px 40px 0px 40px;
       }
       input[type='tel'] {
         background-image: url('../img/icons/phone.svg');
-        background-position: left;
+        background-position: 15px 50%;
         background-repeat: no-repeat;
-        padding: 0px 40px 0px 40px;
       }
     }
   }

@@ -26,7 +26,7 @@
         border-radius: 5px;
         width: 400px;
         height: 60px;
-        padding: 0px 40px 0px 40px;
+        padding: 0px 40px 0px 55px;
         font-family: Montserrat;
         font-weight: 300;
         font-size: 16px;
@@ -35,12 +35,12 @@
       }
       input[id='secondFormName'] {
         background-image: url('../img/icons/person.svg');
-        background-position: left;
+        background-position: 15px 50%;
         background-repeat: no-repeat;
       }
       input[id='secondFormEmail'] {
         background-image: url('../img/icons/mail.svg');
-        background-position: left;
+        background-position: 15px 50%;
         background-repeat: no-repeat;
       }
     }
